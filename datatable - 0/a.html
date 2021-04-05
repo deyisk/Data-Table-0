@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+<style>
+
+  td{
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  th{
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  tr{
+    font-size: 17px;
+    text-align: center;
+  }
+
+  table{
+    margin: 35px;
+    text-align: center;
+    width: 1100px;
+    float: left;
+    }
+
+  body{
+    text-align: center;
+    width: 1px;
+    height: 500px;
+  }
+
+  button {
+    text-align: center;
+  }
+
+  .kutu{
+    margin:auto;
+    position: relative;
+    width: 70px;
+    text-align: left;
+
+
+
+  }
+
+  .ic{
+    margin:auto;
+    width: 100px;
+    height: 30px;
+    position: relative;
+  }
+
+  .btn8{
+    width: 90px;
+    position: absolute;
+    left: 320px;
+
+  }
+
+  .btn9{
+    width: 90px;
+    position: absolute;
+    left: 220px;
+  }
+
+  .b8{
+    height: 20px;
+  }
+
+  .modal-footer{
+
+    height: 10px;
+    margin:30px;
+  }
+
+
+  .duzenle{
+    width: 60px;
+    position: absolute;
+    right: 180px;
+    margin: 56px;
+  }
+
+  .sil{
+    width: 60px;
+
+    position: absolute;
+    right: 110px;
+    margin: 56px;
+  }
+
+  .dropdown{
+
+    width: 90px;
+    height: 10px;
+    position: absolute;
+    right: 150px;
+    margin: 50px;
+    border-width: 100px;
+
+  }
+
+  .dropdown-menu
+  {
+    width: 1px;
+    text-align: center;
+    height: 130px;
+    float: left;
+    
+  }
+
+  .dropdown-item1{ /*duzenle */
+    width:140px;
+    height:40px;
+    float:left;
+    margin:5px;
+    margin-bottom:0px;
+  }
+
+  .dropdown-item2{ /*sil*/
+    width:140px;
+    height:40px;
+    float:left;
+    margin:5px;
+    margin-bottom:0px;
+  }
+  .dropdown-item3{ /*guncelle */
+    width:140px;
+    height:40px;
+    float:left;
+    margin:5px;
+    margin-bottom:0px;
+  }
+
+  .mymodalg{
+    width: 100px;
+    height: 50px;
+    float: right;
+  }
+
+ 
+  /*.button1{
+    margin:10px;
+    padding: 30px;
+  }   sil duzenle butonlarının boyutları */ 
+
+  /*.modal-header
+  {
+    margin:100px;
+  }  modalın boyutu */
+
+  
+
+</style>
+
+
+<body>
+
+<hr/>
+<div class="tablog">
+<table width="800" border="1">
+ <tr>
+   <th>Numara</th>
+   <th>Ad</th>
+   <th>Soyad</th>
+   <th>Tel</th>
+   <th>Mail</th>
+   <th>Meslek</th>
+
+
+
+<div class="dropdown">
+  <button class="btn" type="button" data-toggle="dropdown">
+    Seçenekler
+  </button>
+
+
+
+  <div class="dropdown-menu">
+
+  <a class="dropdown-item1"  data-toggle="modal" data-target="#myModall">Düzenle </a>
+
+  <a class="dropdown-item2" data-toggle="modal" data-target="#myModal">Sil</a>
+
+  <a class="dropdown-item3" data-toggle="modal" data-target="#myModalll">Güncelle</a>
+
+ 
+  </div>
+
+</div> 
+
+
+
+ </tr>
+ 
+<tr>
+    <th>0</th>
+    <td>Hasan</td>
+    <td>Yılmaz</td>
+
+      <td>05987635251</td>
+    <td>h@gmail.com</td>
+    <td>Doktor</td>
+
+ </tr>
+ 
+ <tr>
+   
+     <th>1</th>
+    <td>Merve</td>
+    <td>Yılmaz</td>
+      <td>05987656565</td>
+    <td>m@gmail.com</td>
+    <td>Mühendis</td>
+ </tr>
+
+ <tr>
+     <th>2</th>
+    <td>Can</td>
+    <td>Kılıç</td>
+      <td>05987657632</td>
+    <td>can@gmail.com</td>
+    <td>Öğretmen</td>
+ </tr>
+
+ <tr>
+     <th>3</th>
+    <td>Zeynep</td>
+    <td>Şahin</td>
+      <td>08756354123</td>
+    <td>zeynep@hotmail.com</td>
+    <td>Öğrenci</td>
+ </tr>
+ <tr>
+     <th>4</th>
+    <td>Tuğba</td>
+    <td>Doğan</td>
+      <td>07658746352</td>
+    <td>td@hotmail.com</td>
+    <td>Öğrenci</td>
+ </tr>
+ <tr>
+     <th>5</th>
+    <td>Ali</td>
+    <td>Kara</td>
+      <td>07658746352</td>
+    <td>a@gmail.com</td>
+    <td>Mühendis</td>
+ </tr>
+ <tr>
+    <th>6</th>
+    <td>Leyla</td>
+    <td>Yaman</td>
+      <td>08789890909</td>
+    <td>leyla@gmail.com</td>
+    <td>Öğrenci</td>
+ </tr>
+ 
+
+ 
+</table>
+ 
+<br />
+<hr />
+</div>
+
+
+
+ <!-- sil butonu -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+<div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Bilgi</h4>
+        </div>
+        <div class="modal-body" >
+          <p>Silmek İstediğinize Emin Misiniz?</p>
+          <button  id="a1">Evet</button>
+          <button  id="a2">Hayır</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+        </div>
+      </div>  
+    </div>
+  </div>
+
+<!-- duzenle -->
+
+  <div class="modal fade" id="myModall" role="dialog">
+    <div class="modal-dialog">
+<div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Bilgi</h4>
+        </div>
+        <div class="modal-body" id="mb">
+
+          <!--Düzenle -->    
+
+<div class="kutu" align="center" >
+
+
+Numara: 
+<input type="text" class="ic" name="isim">
+<br>
+Ad: 
+<input type="text" class="ic" name="soyad">
+<br>
+Soyad: 
+<input type="text" class="ic">
+
+Tel:
+<input type="text" class="ic" name="isim">
+<br>
+Mail: 
+<input type="text" class="ic" name="soyad">
+<br>
+Meslek: 
+<input type="text" class="ic" >
+
+
+</form>
+          </div>
+          <div class="b8"></div>
+          <button class="btn8">Düzenle</button>
+          <button class="btn9">Vazgeç</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="button2" data-dismiss="modal">Kapat</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--guncelle butonu -->
+
+      <div class="modal fade" id="myModalll" role="dialog">
+    <div class="modal-dialog">
+<div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Bilgi</h4>
+        </div>
+        <div class="modal-body" id="mb">
+
+<div class="kutu" align="center" >
+
+</form>
+
+
+          </div>
+          <div class="b8">
+
+          <button onClick="myFunction()">İsme Göre Sırala</button>
+          <!-- <button class="btn8">Soyisme Göre</button>
+          <button class="btn9" onClick="myFunction">İsme Göre</button> -->
+
+          <div class="demo"> 
+            <p id="demo" class="demo"></p>
+  
+          </div>
+
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="button2" data-dismiss="modal">Kapat</button>
+        </div>
+      </div>
+
+
+  <script>
+// var isimler = ["Hasan","Merve","Can","Zeynep","Tuğba" ,"Ali", "Leyla"];
+// document.getElementById("demo").innerHTML = isimler;
+
+// function myFunction() {
+//   isimler.sort();
+//   document.getElementById("demo").innerHTML = isimler;
+// }
+</script> 
+
+
+</body>
+</html>
